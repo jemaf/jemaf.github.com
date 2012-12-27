@@ -1,0 +1,26 @@
+---
+layout: page
+title: Projects
+---
+
+{% include JB/setup %}
+
+<div>
+	<p>
+		Checkout some of my projects
+	</p>
+	<table>
+		{% for page in site.pages %}
+		{% if page.group == 'project' %}
+		<tr>
+			<h4><a href="{{page.link}}">{{page.title}}</a></h4>
+			{% if page.img != null %}
+			<img src="{{page.img}}" style="float: left; padding: 3px 3px 0px; max-width: 400px" />
+			{% endif %}
+			{{page.content}}
+		</tr>
+		{% endif %}
+		{% endfor %}
+	</table>
+
+</div>
