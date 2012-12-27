@@ -1,0 +1,23 @@
+---
+layout: page
+title: Projects
+---
+
+{% include JB/setup %}
+
+<div>
+
+	<p>
+		Checkout some of my projects
+	</p>
+
+	<ul>
+		{% for project in site.posts %}
+		<li>
+			<a href="{{project.url}}"><img src="{project.image}}"</a>
+			<h3>{{project.title}}</h3>
+		</li>
+		{% endfor %}
+	</ul>
+
+</div>

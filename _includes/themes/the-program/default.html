@@ -32,12 +32,8 @@
 									<a href="/home/awards.html">Awards</a>
 								</li>
 								<li class="projects">
-									<a href="/projects/index.html">Projects</a>
+									<a href="/project/index.html">Projects</a>
 								</li>
-								<!-- <li class="archive"><a href="/archive.html">archive</a></li>
-								<li class="page"><a href="/pages.html">pages</a></li>
-								<li class="category"><a href="/categories.html">categories</a></li>
-								<li class="tag"><a href="/tags.html">tags</a></li> -->
 							</ul>
 						</nav>
 					</div><!-- unit-inner -->
@@ -69,9 +65,15 @@
 								<li class="twitter">
 									<a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">twitter.com/{{ site.author.twitter }}</a>
 								</li>
-								<li class="rss">
-									<a href="http://feeds.feedburner.com/{{ site.author.feedname }}">Subscribe to RSS Feed</a>
+								<li class="linkedin">
+									<a href="{{site.author.linkedin}}" rel="me">LinkedIn</a>
 								</li>
+								<li class="lattes">
+									<a href="{{site.author.lattes}}" rel="me">Lattes</a>
+								</li>
+								<!-- <li class="rss">
+									<a href="http://feeds.feedburner.com/{{ site.author.feedname }}">Subscribe to RSS Feed</a>
+								</li> -->
 							</ul>
 						</div><!-- misc -->
 						<p class="licence">
@@ -133,6 +135,8 @@
 						}
 					}
 				}
+
+
 				j.addEventListener("orientationchange", f, false);
 				j.addEventListener("deviceorientation", e, false)
 			})(this);
