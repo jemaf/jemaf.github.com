@@ -16,12 +16,14 @@ title: Projects
 	<table>
 		{% for page in site.pages %}
 		{% if page.group == 'project' %}
+		<tr><td colspan="2"><h4><a href="{{page.link}}">{{page.title}}</a></h4></td></tr>
 		<tr>
-			<h4><a href="{{page.link}}">{{page.title}}</a></h4>
 			{% if page.img != null %}
-			<img src="{{page.img}}" style="float: left; padding: 3px 3px 0px; max-width: 400px" />
-			{% endif %}
-			{{page.content}}
+			<td><img src="{{page.img}}" style="padding: 3px 3px 0px; max-width: 400px; max-height: 300px;" /> </td>
+			<td>{{page.content}}</td>
+			{% else %}
+			<td colspan="2">{{page.content}}</td>
+			{%endif%}
 		</tr>
 		{% endif %}
 		{% endfor %}
