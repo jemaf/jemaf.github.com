@@ -1,8 +1,7 @@
-{% if site.analytics %}
 <script type="text/javascript">
 
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', '{{ site.analytics }}']);
+_gaq.push(['_setAccount', '{{ site.JB.analytics.google.tracking_id }}']);
 _gaq.push(['_trackPageview']);
 
 (function() {
@@ -12,4 +11,3 @@ _gaq.push(['_trackPageview']);
 })();
 
 </script>
-{% endif %}
