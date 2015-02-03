@@ -1,12 +1,26 @@
 ---
-layout: page
-title: Welcome
+layout: default
+title: Home
 ---
 
-{% include JB/setup %}
+<style media="screen">
 
-<h3> About me </h3>
-<img src="res/img/foto.png" style="float:right; max-width:500px" alt="my photo">
+	#profile_photo {
+		float:none;
+		margin-left: auto;
+		margin-right: auto;
+		max-width:100%;
+	}
+
+	@media(min-width: 38em) {
+		#profile_photo {
+			float:right;
+			max-width:60%;
+		}
+	}
+</style>
+
+<img src="res/img/foto.png" id="profile_photo" alt="my photo">
 <p>
 	MSc in Computer Science at Universidade Federal de Minas Gerais (UFMG).
 </p>
