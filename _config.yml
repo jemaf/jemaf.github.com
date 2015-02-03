@@ -22,14 +22,6 @@ social:
   lattes:         http://lattes.cnpq.br/4459015753704495
   linkedin:       http://www.linkedin.com/profile/view?id=81602055
 
-paginate:         5
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
-
 analytics:
   google:
     id:           UA-26507443-1
