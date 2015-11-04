@@ -2,6 +2,7 @@
 title: Test course
 year: 2016
 layout: class
+gitter_room: gitterHQ/sidecar
 ---
 
 <p class="lead">
