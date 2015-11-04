@@ -1,3 +1,5 @@
+{% assign classes = site.pages | where: 'group', 'class' %}
+
 <div class="navbar navbar-default" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -12,6 +14,9 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
       <li><a href="{{ site.baseurl }}/list.html">List</a></li>
+      {% if classes.size > 0 %}
+      <li><a href="{{ site.baseurl }}/classes.html">Classes</a></li>
+      {% endif %}
       <li><a href="{{ site.baseurl }}/links.html">Links</a></li>
       <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
       <li><a href="{{ site.baseurl }}/about.html">About</a></li>
@@ -26,6 +31,9 @@
     <li class="sidebar-brand"><a href="{{ site.baseurl }}/"><h1 class="brand">{{ site.name }}</h1></a><h3>{{ site.description }}</h3></li>
     <hr />
     <li><a href="{{ site.baseurl }}/list.html">List</a></li>
+    {% if classes.size > 0 %}
+    <li><a href="{{ site.baseurl }}/classes.html">Classes</a></li>
+    {% endif %}
     <li><a href="{{ site.baseurl }}/links.html">Links</a></li>
     <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
     <li><a href="{{ site.baseurl }}/about.html">About</a></li>
