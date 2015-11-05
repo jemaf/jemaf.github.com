@@ -1,39 +1,18 @@
 ---
 title: Herring Cove
 ---
-{% include showcase.html %}
-{% include greeting.html %}
 
-{% if site.posts != empty %}
-<div class="recent-posts">
-  <h1>Recent Posts</h1>
-  {% for post in site.posts limit: 3 %}
-    {% if forloop.first %}
-      {% assign add_class = 'most-recent' %}
-      {% capture fresh_tag %}
-        &nbsp;<span class="badge"><smaller>FRESH</smaller></span>
-      {% endcapture %}
-    {% endif %}
-    <ul class="homepage-posts {{ add_class }}">
-      <li>
-        <span>
-          <h4>
-            <a href="{{ site.baseurl }}/{{ post.url }}">
-              {{ post.title }}
-            </a>
-            {{ fresh_tag }}
-            <time class="pull-right">
-              {{ post.date | date_to_string | date: "%b %-d, %Y"  }}
-            </time>
-          </h4>
-        </span>
-      </li>
-    </ul>
-    {% assign add_class = '' %}
-    {% assign fresh_tag = '' %}
-  {% endfor %}
-  <ul>
-    <a href="{{ site.baseurl }}/list.html">View More...</a>
-  </ul>
+<div class="main-panel">
+  <div class="circle" style='background-image: url("{{ site.baseurl }}/images/profile.png")'>
+  </div>
+
+  <p class="lead">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <p class="lead">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <p class="lead">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
 </div>
-{% endif %}
