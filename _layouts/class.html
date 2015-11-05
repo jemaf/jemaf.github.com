@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% if page.class_image == null %}
+  {% assign class_image = 'showcase' %}
+{% else %}
+  {% assign class_image = page.class_image %}
+{% endif %}
+
+</div>
+<style>
+.showcase-wrapper {background-image: url("{{ site.baseurl }}/images/{{class_image}}.jpg");}
+</style>
+<div class="showcase-wrapper sticky">
+  <div class="showcase-text">
+      {{ page.title }}
+  </div>
+</div>
+<div class="container">
+<div id="article">
+  <div class="post">
+    {{ content }}
+  </div>
+</div>
+
+{% include chat.html %}
+{% include pager.html %}

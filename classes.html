@@ -1,0 +1,17 @@
+---
+title: Classes &amp; Courses
+---
+<div class="container">
+  <div id="article">
+  <h1>{{ page.title }}</h1>
+  <dl class="posts">
+    {% assign class_by_year = site.pages | where: 'layout','class' | group_by: 'year' | sort: 'name' | reverse %}
+    {% for group in class_by_year %}
+      {% assign classes = group.items %}
+      <dt> {{ group.name }} </dt>
+      {% for class in classes %}
+        <dd><span><a href="{{ site.baseurl }}{{ class.url }}">{{ class.title }}</a></span></dd>
+      {% endfor %}
+    {% endfor %}
+  </dl>
+</div>

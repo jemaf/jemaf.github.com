@@ -1,0 +1,9 @@
+
+{% if page.gitter_room != null %}
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: '{{ page.gitter_room }}'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+{% endif %}
