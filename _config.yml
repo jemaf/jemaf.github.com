@@ -29,3 +29,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+    values:
+      base_css: "hc"
