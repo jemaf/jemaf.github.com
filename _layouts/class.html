@@ -9,12 +9,12 @@ layout: default
 
 </div>
 <style>
-.showcase-wrapper {background-image: url("{{ site.baseurl }}/images/{{class_image}}");}
+.showcase-text:before {
+  background-image: url("{{ site.baseurl }}/images/{{class_image}}");
+}
 </style>
-<div class="showcase-wrapper sticky">
-  <div class="showcase-text">
-      {{ page.title }}
-  </div>
+<div class="showcase-text">
+    {{ page.title }}
 </div>
 <div class="container">
 <div id="article">
