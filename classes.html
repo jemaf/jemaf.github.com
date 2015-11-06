@@ -10,7 +10,7 @@ title: Classes &amp; Courses
       {% assign classes = group.items %}
       <dt> {{ group.name }} </dt>
       {% for class in classes %}
-        <dd><span><a href="{{ site.baseurl }}{{ class.url }}">{{ class.title }}</a></span></dd>
+        <dd><span class="language-badge"><i class="fa fa-globe fa-pull-left fa-small"></i> {{ class.language }}</span><a href="{{ site.baseurl }}{{ class.url }}">{{ class.title }}</a></dd>
       {% endfor %}
     {% endfor %}
   </dl>

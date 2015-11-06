@@ -5,15 +5,6 @@ title: Academic Achievements
 {% assign papers_by_year = site.pages | where: 'group','paper' | group_by: 'year' | sort: 'name' | reverse %}
 {% assign awards_by_year = site.pages | where: 'group','award' | group_by: 'year' | sort: 'name' | reverse %}
 
-<style media="screen">
-  {% for group in awards_by_year %}
-  .award-{{ group.name }}:before {
-    content: '[{{ group.name }}]';
-    padding-right: 10px;
-  }
-  {% endfor %}
-</style>
-
 <h1>{{ page.title }}</h1>
 
 <p class="lead">
@@ -26,7 +17,7 @@ title: Academic Achievements
     {% for group in papers_by_year %}
       {% assign papers = group.items %}
       {% for paper in group.items %}
-    <li><span><a href="{{ site.baseurl }}/papers/pdf/{{ paper.pdf }}.pdf">{{ paper.title }}</a> - {{ paper.content }}<time class="pull-right post-list">{{ paper.year }}</h4></time></span></li>
+    <li><span class="badge">{{ paper.year }}</span><span><a href="{{ site.baseurl }}/papers/pdf/{{ paper.pdf }}.pdf">{{ paper.title }}</a> - {{ paper.content }}<time class="pull-right post-list"><span class="language-badge"><i class="fa fa-globe fa-pull-left"></i> {{ paper.language }}</span></time></span></li>
       {% endfor %}
     {% endfor %}
   </ul>
@@ -40,7 +31,7 @@ title: Academic Achievements
     {% for group in awards_by_year %}
       {% assign award = group.items %}
       {% for award in group.items %}
-      <li class="award-{{ award.year }}">{{ award.content }}</li>
+      <li><span class="badge">{{ award.year }}</span>{{ award.content }}</li>
       {% endfor %}
     {% endfor %}
   </ul>

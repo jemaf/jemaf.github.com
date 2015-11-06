@@ -727,7 +727,18 @@ time
 .academic-list > li {
   padding-bottom: 1.0em;
   margin-left: 1em;
-  text-indent: -1em;
+}
+
+.badge {
+  top: -3px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.language-badge {
+  margin-right: 10px;
+  font-size: 60%;
+  font-weight: normal;
 }
 
 @media (max-width:767px) {
