@@ -216,7 +216,7 @@ blockquote
 
 ul,ol,dt
 {
-  font-weight:lighter
+  font-weight:200;
 }
 
 dt {
