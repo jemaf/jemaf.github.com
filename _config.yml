@@ -11,8 +11,9 @@ email: joao.montandon[at]dcc[dot]ufmg[dot]br
 location: Belo Horizonte/Brazil
 disqus:
 
-##Make sure to edit the above fields, especially for disqus.
-
+analytics:
+  google:
+    id:           UA-26507443-1
 
 highlighter: pygments
 markdown: redcarpet
