@@ -454,7 +454,7 @@ time
   background-color:#fff;
   color:#4d4d4d;
   box-shadow:1px 1px 0 1px #e8e8e8;
-  margin:10px 10%;
+  margin:10px 2%;
   padding:10px 40px
 }
 
@@ -713,7 +713,7 @@ time
 }
 
 .academic-list > li {
-  padding-bottom: 0.5em;
+  padding-bottom: 1.0em;
   margin-left: 1em;
   text-indent: -1em;
 }
