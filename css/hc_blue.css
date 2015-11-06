@@ -56,6 +56,11 @@ blockquote
   color:#29598c;
 }
 
+code {
+  color: #353FC7;
+  background-color: #EEF6F9;
+}
+
 @media (max-width:767px) {
   #sidebar-wrapper {
       border-right: 4px solid #29598c;

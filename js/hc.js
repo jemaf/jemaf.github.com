@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $(".container").hide();
-    $(".container").fadeIn('5000');
-    $(".showcase-wrapper").hide();
-    $(".showcase-wrapper").fadeIn("slow");
+    $(".container").fadeIn('slow');
+    $(".showcase-text").hide();
+    $(".showcase-text").fadeIn("slow");
 });
 
 
