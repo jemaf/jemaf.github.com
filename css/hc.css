@@ -214,6 +214,20 @@ blockquote
   background:#f3f3f7
 }
 
+blockquote p:last-child {
+  line-height: 0;
+}
+
+cite {
+    font-style: italic;
+    float: right;
+    font-size: smaller;
+}
+
+cite:before {
+  content: "-- ";
+}
+
 ul,ol,dt
 {
   font-weight:200;
