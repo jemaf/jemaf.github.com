@@ -23,8 +23,11 @@ title: Projects
 <div class="container">
   <div class="project-box">
     <div class="row">
+
       <div class="col-md-3 project-image">
+        {% if project.image %}
         <img src="{{ site.baseurl }}/images/projects/{{ project.image }}">
+        {% endif %}
       </div>
       <div class="col-md-9 project-post">
         <h1>{{ project.title }}</h1><h4>{{ project.subreading }}</h4>
