@@ -605,42 +605,42 @@ time
   text-shadow:1px 1px #fff
 }
 
-.fashion
+.programming
 {
   border-left:solid 2px #bc0005
 }
 
-.fashion-button
+.programming-button
 {
   background-color:#bc0005
 }
 
-.fashion:hover
+.programming:hover
 {
   border-left:solid 2px #f40006
 }
 
-.fashion-button:hover
+.programming-button:hover
 {
   background-color:#f40006
 }
 
-.programming
+.mobile
 {
   border-left:solid 2px #7dbcb2
 }
 
-.programming-button
+.mobile-button
 {
   background-color:#7dbcb2
 }
 
-.programming:hover
+.mobile:hover
 {
   border-left:solid 2px #bbe9e2
 }
 
-.programming-button:hover
+.mobile-button:hover
 {
   background-color:#bbe9e2
 }
