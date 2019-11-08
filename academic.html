@@ -17,7 +17,17 @@ title: Academic Achievements
     {% for group in papers_by_year %}
       {% assign papers = group.items %}
       {% for paper in group.items %}
-    <li><span class="badge">{{ paper.year }}</span><span><a href="{{ site.baseurl }}/papers/pdf/{{ paper.pdf }}.pdf">{{ paper.title }}</a> - {{ paper.content }}<time class="pull-right post-list"><span class="language-badge"><i class="fa fa-globe fa-pull-left"></i> {{ paper.language }}</span></time></span></li>
+        <li>
+          <span class="badge">{{ paper.year }}</span>
+          <span>
+          {% if paper.pdf %}
+            <a href="{{ site.baseurl }}/papers/pdf/{{ paper.pdf }}.pdf">{{ paper.title }}</a> 
+          {% else %}
+            {{ paper.title }}
+          {% endif %}
+            - {{ paper.content }}<time class="pull-right post-list"><span class="language-badge"><i class="fa fa-globe fa-pull-left"></i> {{ paper.language }}</span></time>
+          </span>
+        </li>
       {% endfor %}
     {% endfor %}
   </ul>
