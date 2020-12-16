@@ -15,7 +15,7 @@ analytics:
     id:           UA-26507443-1
 
 highlighter: pygments
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ["tables"]
 
