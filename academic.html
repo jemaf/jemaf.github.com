@@ -25,7 +25,15 @@ title: Academic Achievements
           {% else %}
             {{ paper.title }}
           {% endif %}
-            - {{ paper.content }}<time class="pull-right post-list"><span class="language-badge"><i class="fa fa-globe fa-pull-left"></i> {{ paper.language }}</span></time>
+            - {{ paper.content }}
+            
+            <time class="pull-right post-list">
+              <span class="language-badge"><i class="fa fa-globe fa-pull-left"></i> {{ paper.language }}</span>
+              {% if paper.slides %}
+                <span class="language-badge"><a href="{{ site.baseurl }}/papers/slides/{{ paper.slides }}.pdf">slides</a></span>
+              {% endif %}
+            </time>
+          
           </span>
         </li>
       {% endfor %}
