@@ -11,7 +11,6 @@
   }
 }
 
-
 $font-title: 'Cinzel';
 $font-body: 'Montserrat';
 
@@ -21,7 +20,16 @@ $background-color: white;
 
 body {
     font-family: $font-body;
-    padding: 5% 25% 5% 5%;
+    padding: 5%;
+    font-size: 1.25em;
+
+
+    section {
+        min-height: 100vh;
+        margin-right: 25%;
+
+        @include clearfix;
+    }
 }
 
 
@@ -82,8 +90,25 @@ header {
     @include clearfix;
 }
 
-body > section {
-    min-height: 100vh;
+nav {
+    position: sticky;
+    top: 0;
+    background-color: $background-color;
 
-    @include clearfix;
+    h3 {
+        display: inline-block;
+        margin-bottom: 5px;
+        border-bottom: 0.1em solid $primary-color;
+    }
+
+    ul {
+        display: inline-flex;
+        list-style-type: none;
+        float: inline-end;
+        margin-bottom: 5px;
+
+        li {
+            padding: 0 15px 0 15px;
+        }
+    }
 }
