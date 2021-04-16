@@ -23,10 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #text {
+  letter-spacing: 2px;
   display: inline;
   vertical-align: middle;
   color: blue;
-  letter-spacing: 2px;
   margin-left: 0.2em;
 }
 
@@ -115,15 +115,22 @@ nav ul li {
   padding: 0 15px 0 15px;
 }
 
-#about {
+section {
   padding-top: 80px;
 }
 
-#about p {
+section h1 {
+  font-size: 2em;
+}
+
+section p {
   line-height: 2;
-  margin: 2.5em 0 2.5em 0;
-  text-indent: 3em;
   text-align: justify;
+  margin: 2.5em 0 2.5em 0;
+}
+
+#about p {
+  text-indent: 3em;
 }
 
 #about img {
@@ -136,5 +143,64 @@ nav ul li {
           filter: grayscale(100%);
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.publication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.publication .title {
+  font-weight: 600;
+}
+
+.publication .authors {
+  font-size: 0.8em;
+}
+
+.publication aside {
+  text-align: center;
+  padding: 15px;
+}
+
+.publication .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.publication .footer ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.publication .footer ul.keywords {
+  padding: 0;
+}
+
+.publication .footer ul.keywords li {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 0.6em;
+  border-radius: 8px;
+}
+
+.publication .footer ul.icons {
+  padding: 0;
+}
+
+.publication .footer ul.icons li {
+  margin-right: 15px;
 }
 /*# sourceMappingURL=style.css.map */
