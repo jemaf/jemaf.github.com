@@ -65,12 +65,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    height: 100vh;
+    height: 85vh;
 
     div {
         width: 100%;
         position: relative;
-        top: 50%;
+        top: 45%;
         font-size: 2.0em;
 
         div {
@@ -94,6 +94,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: $background-color;
+    z-index: 999;
 
     h3 {
         display: inline-block;
@@ -110,5 +111,26 @@ nav {
         li {
             padding: 0 15px 0 15px;
         }
+    }
+}
+
+
+#about {
+    padding-top: 80px;
+    p {
+        line-height: 2;
+        margin: 2.5em 0 2.5em 0;
+        text-indent: 3em;
+        text-align: justify;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        filter: grayscale(100%);
+        object-fit: cover;
     }
 }

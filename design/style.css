@@ -59,13 +59,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  height: 100vh;
+  height: 85vh;
 }
 
 header div {
   width: 100%;
   position: relative;
-  top: 50%;
+  top: 45%;
   font-size: 2.0em;
 }
 
@@ -93,6 +93,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 999;
 }
 
 nav h3 {
@@ -112,5 +113,28 @@ nav ul {
 
 nav ul li {
   padding: 0 15px 0 15px;
+}
+
+#about {
+  padding-top: 80px;
+}
+
+#about p {
+  line-height: 2;
+  margin: 2.5em 0 2.5em 0;
+  text-indent: 3em;
+  text-align: justify;
+}
+
+#about img {
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
