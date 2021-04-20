@@ -5,6 +5,7 @@ body {
   font-family: "Montserrat";
   padding: 5%;
   font-size: 1.25em;
+  max-width: 1280px;
 }
 
 body section {
@@ -202,5 +203,60 @@ section p {
 
 .publication .footer ul.icons li {
   margin-right: 15px;
+}
+
+.board {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.board div {
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 145px;
+  height: 200px;
+  background-color: black;
+  color: white;
+}
+
+.board div span {
+  margin: auto;
+  width: 100%;
+}
+
+.board div footer {
+  font-size: small;
+  margin-top: auto;
+}
+
+.board div i {
+  position: inherit;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: right;
+  font-size: 5em;
+}
+
+.board div h4 {
+  margin-top: -5em;
 }
 /*# sourceMappingURL=style.css.map */
