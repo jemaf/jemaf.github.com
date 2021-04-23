@@ -19,8 +19,14 @@ $highlight-color: blue;
 $background-color: white;
 
 body {
+    margin: 0;
+    padding: 0;
+}
+
+
+header, main {
     font-family: $font-body;
-    padding: 5%;
+    padding: 5% 5% 0 5%;
     font-size: 1.25em;
     max-width: 1280px;
 
@@ -30,6 +36,12 @@ body {
 
         @include clearfix;
     }
+}
+
+nav {
+    padding: 1% 5% 0 5%;
+    font-family: $font-body; 
+    font-size: 1.25em;
 }
 
 
@@ -128,6 +140,25 @@ section {
         line-height: 2;
         text-align: justify;
         margin: 2.5em 0 2.5em 0;
+    }
+}
+
+
+body > footer {
+    font-family: $font-body;
+    background-color: lighten($primary-color, 10%);
+    color: $background-color;
+
+    padding: 1em 1em 1em 5em;
+    margin: 0;
+
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+
+    i {
+        padding-left: 0.3%;
+        padding-right: 0.3%;
     }
 }
 
