@@ -37,6 +37,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-title;
 }
 
+li {
+    line-height: 2;
+}
 
 
 #text {
@@ -66,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    height: 85vh;
+    height: 88vh;
 
     div {
         width: 100%;
@@ -116,7 +119,7 @@ nav {
 }
 
 section {
-    padding-top: 80px;
+    padding-top: 40px;
     h1 {
         font-size: 2em;
     }
@@ -167,6 +170,51 @@ section {
     }
 }
 
+#teaching {
+
+    p {
+        line-height: 1.5;   
+        margin: 1.5em 0 1.5em 0; 
+    }
+
+    li {
+        line-height: 1.5;
+    }
+
+    h3 {
+        span {
+            display: block;
+            font-family: $font-body;
+            font-weight: normal;
+            font-size: 0.7em;
+        }
+    }
+
+    .course {
+        padding-left: 1em;
+        border-left: 10px lighten($primary-color, 95%) solid;
+        margin-bottom: 35px;
+
+        .classes {
+            & > ul {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 0;
+    
+                list-style-type: none;
+                display: inline-flex;
+    
+                li {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
 .publication {
     display: flex;
     align-items: center;
@@ -211,7 +259,7 @@ section {
                 padding: 0;
 
                 li {
-                    margin-right: 15px;
+                    margin: 0 15px 0 0;
                 }
             }
         }
@@ -262,5 +310,25 @@ section {
         h4 {
             margin-top: -5em;
         }
+    }
+}
+
+ul.badges {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+
+    list-style-type: none;
+    display: inline-flex;
+
+    font-size: 0.75em;
+
+    li {
+        margin: 0 20px 0 0;
+        padding: 3px 12px 3px 12px;
+        border-radius: 10px;
+
+        background-color: $primary-color;
+        color: $background-color;
     }
 }

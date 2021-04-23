@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Cinzel";
 }
 
+li {
+  line-height: 2;
+}
+
 #text {
   letter-spacing: 2px;
   display: inline;
@@ -59,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  height: 85vh;
+  height: 88vh;
 }
 
 header div {
@@ -116,7 +120,7 @@ nav ul li {
 }
 
 section {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 section h1 {
@@ -167,6 +171,42 @@ section p {
 
 #contact ul li {
   padding: 0 1em 0 0;
+}
+
+#teaching p {
+  line-height: 1.5;
+  margin: 1.5em 0 1.5em 0;
+}
+
+#teaching li {
+  line-height: 1.5;
+}
+
+#teaching h3 span {
+  display: block;
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-size: 0.7em;
+}
+
+#teaching .course {
+  padding-left: 1em;
+  border-left: 10px #f2f2f2 solid;
+  margin-bottom: 35px;
+}
+
+#teaching .course .classes > ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#teaching .course .classes > ul li {
+  margin-right: 10px;
 }
 
 .publication {
@@ -225,7 +265,7 @@ section p {
 }
 
 .publication .footer ul.icons li {
-  margin-right: 15px;
+  margin: 0 15px 0 0;
 }
 
 .board {
@@ -281,5 +321,24 @@ section p {
 
 .board div h4 {
   margin-top: -5em;
+}
+
+ul.badges {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 0.75em;
+}
+
+ul.badges li {
+  margin: 0 20px 0 0;
+  padding: 3px 12px 3px 12px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
