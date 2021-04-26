@@ -9,6 +9,30 @@ body {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cinzel";
+}
+
+li {
+  line-height: 2;
+}
+
+a {
+  color: #065DCF;
+  text-decoration: none;
+  padding: 2px 8px 2px 8px;
+  background-size: 100% 200%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #FFFFFF), color-stop(50%, #050E59));
+  background-image: linear-gradient(to bottom, #FFFFFF 50%, #050E59 50%);
+  -webkit-transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+a:hover {
+  background-position: 0 100%;
+  color: #FFFFFF;
+}
+
 header, main {
   font-family: "Montserrat";
   padding: 5% 5% 0 5%;
@@ -72,6 +96,15 @@ nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -80,25 +113,18 @@ nav ul li {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 15px 0 15px;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-
-nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
+  background-size: 100% 200%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #111111), color-stop(50%, #E87A2D));
+  background-image: linear-gradient(to bottom, #111111 50%, #E87A2D 50%);
+  -webkit-transition: background-position 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-position 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-nav ul li:hover {
-  background-color: #ed975b;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Cinzel";
-}
-
-li {
-  line-height: 2;
+nav ul li a:hover {
+  background-position: 0 100%;
+  color: #111111;
 }
 
 #text {
@@ -221,12 +247,12 @@ body > footer i {
 }
 
 #contact ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -234,8 +260,14 @@ body > footer i {
   list-style-type: none;
 }
 
-#contact ul li {
-  padding: 0 1em 0 0;
+#contact ul a {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+#contact ul a:hover {
+  color: #050E59;
+  background-image: none;
 }
 
 #teaching p {
@@ -331,6 +363,16 @@ body > footer i {
 
 .publication .footer ul.icons li {
   margin: 0 15px 0 0;
+}
+
+.publication .footer ul.icons li a {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.publication .footer ul.icons li a:hover {
+  color: #050E59;
+  background-image: none;
 }
 
 .board {
