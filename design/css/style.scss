@@ -64,28 +64,48 @@ nav {
     z-index: 999;
 
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
 
     font-family: $font-body; 
     font-size: 1.25em;
 
-    background-color: lighten($primary, 10%);
+    background-color: $primary;
     color: $background;
 
+
+
     h3 {
+        align-self: center;
         margin: 0;
         display: inline-block;
     }
 
     ul {
-        margin: 0;
         display: inline-flex;
         list-style-type: none;
         float: inline-end;
+        align-items: stretch;
 
+        margin: 0;
+                
         li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
             padding: 0 15px 0 15px;
+            
+            transition: background-color 0.2s;
+            
+            a {
+                color: $background;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: lighten($accent-1, 10%);
+            }
         }
     }
 }
@@ -174,7 +194,7 @@ section {
 
 body > footer {
     font-family: $font-body;
-    background-color: lighten($primary, 10%);
+    background-color: $primary;
     color: $background;
 
     padding: 1em 1em 1em 5em;
