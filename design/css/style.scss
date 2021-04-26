@@ -14,9 +14,27 @@
 $font-title: 'Cinzel';
 $font-body: 'Montserrat';
 
-$primary-color: black;
-$highlight-color: blue;
-$background-color: white;
+
+/* Color Theme Swatches in Hex */
+// $accent-1:  #2765B0;
+// $accent-2:  #4A76AB;
+// $accent-3:  #4C78AC;
+// $background:#F2F2F3;
+// $primary:   #3F3F3F;
+
+/* Color Theme Swatches in Hex */
+$accent-1:   #E87A2D;
+$accent-2:   #050E59;
+$accent-3:   #065DCF;
+$background: #FFFFFF;
+$primary:    #111111;
+
+/* Color Theme Swatches in Hex */
+// $accent-1: #5A30F2;
+// $accent-2: #6A44F2;
+// $accent-3: #5F3DD9;
+// $primary: #201F26;
+// $background: #F2F2F2;
 
 body {
     margin: 0;
@@ -39,9 +57,37 @@ header, main {
 }
 
 nav {
-    padding: 1% 5% 0 5%;
+    height: 5vh;
+    padding: 0 5% 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
     font-family: $font-body; 
     font-size: 1.25em;
+
+    background-color: lighten($primary, 10%);
+    color: $background;
+
+    h3 {
+        margin: 0;
+        display: inline-block;
+    }
+
+    ul {
+        margin: 0;
+        display: inline-flex;
+        list-style-type: none;
+        float: inline-end;
+
+        li {
+            padding: 0 15px 0 15px;
+        }
+    }
 }
 
 
@@ -53,12 +99,16 @@ li {
     line-height: 2;
 }
 
+a {
+    
+}
+
 
 #text {
 	letter-spacing: 2px;
 	display: inline;
 	vertical-align: middle;
-	color: $highlight-color;
+	color: $accent-1;
     margin-left: 0.2em;
 }
 
@@ -67,7 +117,7 @@ li {
 	vertical-align: middle;
 	width: 10px;
 	height: 1em;
-	background-color: $highlight-color;
+	background-color: $accent-1;
 	animation: blink 1s step-end infinite;
 }
 
@@ -76,12 +126,13 @@ li {
 		background-color: transparent 
 	}
 	50% { 
-		background-color: $highlight-color; 
+		background-color: $accent-1; 
 	}
 }
 
 header {
-    height: 88vh;
+    height: 95vh;
+    padding: 0 0 0 5%;
 
     div {
         width: 100%;
@@ -99,36 +150,13 @@ header {
         hr {
             width: 1.5em;
             margin-left: 0px;
-            border-top: 0.5em solid $primary-color;
+            border-top: 0.5em solid $primary;
         }
     }
 
     @include clearfix;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: $background-color;
-    z-index: 999;
-
-    h3 {
-        display: inline-block;
-        margin-bottom: 5px;
-        border-bottom: 0.1em solid $primary-color;
-    }
-
-    ul {
-        display: inline-flex;
-        list-style-type: none;
-        float: inline-end;
-        margin-bottom: 5px;
-
-        li {
-            padding: 0 15px 0 15px;
-        }
-    }
-}
 
 section {
     padding-top: 40px;
@@ -146,8 +174,8 @@ section {
 
 body > footer {
     font-family: $font-body;
-    background-color: lighten($primary-color, 10%);
-    color: $background-color;
+    background-color: lighten($primary, 10%);
+    color: $background;
 
     padding: 1em 1em 1em 5em;
     margin: 0;
@@ -223,7 +251,7 @@ body > footer {
 
     .course {
         padding-left: 1em;
-        border-left: 10px lighten($primary-color, 95%) solid;
+        border-left: 10px lighten($primary, 95%) solid;
         margin-bottom: 35px;
 
         .classes {
@@ -277,8 +305,8 @@ body > footer {
                 padding: 0;
 
                 li {
-                    background-color: $primary-color;
-                    color:$background-color;
+                    background-color: $primary;
+                    color:$background;
                     padding: 5px;
                     margin-right: 10px;
                     font-size: 0.6em;
@@ -316,8 +344,8 @@ body > footer {
         width: 145px;
         height: 200px;
 
-        background-color: $primary-color;
-        color: $background-color;
+        background-color: $primary;
+        color: $background;
 
 
         span {
@@ -333,7 +361,7 @@ body > footer {
 
         i {
             position: inherit;
-            color: rgba($background-color, 0.2);
+            color: rgba($background, 0.2);
             text-align: right;
             font-size: 5em;
         }
@@ -359,7 +387,7 @@ ul.badges {
         padding: 3px 12px 3px 12px;
         border-radius: 10px;
 
-        background-color: $primary-color;
-        color: $background-color;
+        background-color: $primary;
+        color: $background;
     }
 }
