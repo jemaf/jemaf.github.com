@@ -455,7 +455,7 @@ body > footer i {
   display: block;
   font-family: "Montserrat";
   font-weight: normal;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 #teaching .course {
@@ -501,7 +501,13 @@ body > footer i {
 }
 
 .publication .authors {
-  font-size: 0.85rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 476px) {
+  .publication .authors {
+    font-size: 0.85rem;
+  }
 }
 
 .publication aside {
@@ -589,14 +595,30 @@ body > footer i {
   color: #FFFFFF;
 }
 
+.board div h4 {
+  margin-top: -5rem;
+}
+
 .board div span {
   margin: auto;
   width: 100%;
 }
 
+@media (max-width: 476px) {
+  .board div span {
+    font-size: large;
+  }
+}
+
 .board div footer {
   font-size: small;
   margin-top: auto;
+}
+
+@media (max-width: 476px) {
+  .board div footer {
+    font-size: 0.9rem;
+  }
 }
 
 .board div i {
@@ -606,13 +628,10 @@ body > footer i {
   font-size: 5rem;
 }
 
-.board div h4 {
-  margin-top: -5rem;
-}
-
 @media (max-width: 476px) {
   .board div {
-    width: 200px;
+    width: 80%;
+    height: 120px;
     margin: auto;
     margin-bottom: 10px;
   }
@@ -640,7 +659,7 @@ ul.badges {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 ul.badges li {
@@ -649,5 +668,11 @@ ul.badges li {
   border-radius: 10px;
   background-color: #111111;
   color: #FFFFFF;
+}
+
+@media (max-width: 476px) {
+  ul.badges {
+    font-size: 0.85rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -391,7 +391,7 @@ body > footer {
             display: block;
             font-family: $font-body;
             font-weight: normal;
-            font-size: 0.7rem;
+            font-size: 1rem;
         }
     }
 
@@ -435,8 +435,11 @@ body > footer {
     }
 
     .authors {
-        font-size: 0.85rem;
+        font-size: 1rem;
         
+        @include breakpoint(mobile) {
+            font-size: 0.85rem;
+        }
     }
 
     aside {
@@ -508,16 +511,26 @@ body > footer {
         background-color: $primary;
         color: $background;
 
+        h4 {
+            margin-top: -5rem;
+        }
 
         span {
             margin: auto;
             width: 100%;
+
+            @include breakpoint(mobile) {
+                font-size: large;
+            }
         }
 
         footer {
             font-size: small;
             margin-top: auto;
-            
+
+            @include breakpoint(mobile) {
+                font-size: 0.9rem;
+            }
         }
 
         i {
@@ -527,12 +540,9 @@ body > footer {
             font-size: 5rem;
         }
 
-        h4 {
-            margin-top: -5rem;
-        }
-
         @include breakpoint(mobile) {
-            width: 200px;
+            width: 80%;
+            height: 120px;
             margin: auto;
             margin-bottom: 10px;
         }
@@ -553,7 +563,7 @@ ul.badges {
     display: inline-flex;
     flex-wrap: wrap;
 
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 
     li {
         margin: 0 20px 10px 0;
@@ -562,5 +572,9 @@ ul.badges {
 
         background-color: $primary;
         color: $background;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 0.85rem;
     }
 }
