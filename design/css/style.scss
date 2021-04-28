@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+ @mixin breakpoint($point) {
+    @if $point == laptop {
+        @media (max-width: 1081px) { @content ; }
+    }
+    @else if $point == tablet {
+        @media (max-width: 769px) { @content ; }
+    }
+    @else if $point == mobile {
+        @media (max-width: 476px)  { @content ; }
+    }
+}
 
 @mixin clearfix {
   &:after {
@@ -26,26 +37,11 @@ $font-title: 'Cinzel';
 $font-body: 'Montserrat';
 
 
-/* Color Theme Swatches in Hex */
-// $accent-1:  #2765B0;
-// $accent-2:  #4A76AB;
-// $accent-3:  #4C78AC;
-// $background:#F2F2F3;
-// $primary:   #3F3F3F;
-
-/* Color Theme Swatches in Hex */
 $accent-1:   #E87A2D;
 $accent-2:   #050E59;
 $accent-3:   #065DCF;
 $background: #FFFFFF;
 $primary:    #111111;
-
-/* Color Theme Swatches in Hex */
-// $accent-1: #5A30F2;
-// $accent-2: #6A44F2;
-// $accent-3: #5F3DD9;
-// $primary: #201F26;
-// $background: #F2F2F2;
 
 body {
     margin: 0;
@@ -59,6 +55,14 @@ h1, h2, h3, h4, h5, h6 {
 
 li {
     line-height: 2;
+
+    @include breakpoint(tablet) {
+        line-height: 1.5;
+    }
+
+    @include breakpoint(mobile) {
+        line-height: 1.25;
+    }
 }
 
 a {
@@ -72,16 +76,83 @@ a {
 
 header, main {
     font-family: $font-body;
-    padding: 5% 5% 0 5%;
     font-size: 1.25em;
     max-width: 1280px;
+    padding: 5% 5% 0 5%;
 
 
-    section {
-        margin-right: 25%;
-
-        @include clearfix;
+    @include breakpoint(laptop) {
+        font-size: 1em;
     }
+    @include breakpoint(mobile) {
+        font-size: 0.65em;
+        width: 100%;
+    }
+}
+
+header {
+    height: calc(100vh - 5vh);
+    padding: 0 0 0 5%;
+
+    div {
+        width: 100%;
+        position: relative;
+        top: 45%;
+        font-size: 2.0em;
+
+        div {
+            display: inline;
+            vertical-align: middle;
+            font-family: $font-title;
+            font-weight: 600;
+        }
+
+        hr {
+            width: 1.5em;
+            margin-left: 0px;
+            border-top: 0.5em solid $primary;
+        }
+    }
+
+    #text {
+        letter-spacing: 2px;
+        display: inline;
+        vertical-align: middle;
+        color: $accent-1;
+        margin-left: 0.2em;
+
+        @include breakpoint(tablet) {
+            &::before {
+                content: '';
+                display: block;
+            }
+        }
+    }
+
+    #cursor {
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 1em;
+        background-color: $accent-1;
+        animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+        from, to { 
+            background-color: transparent 
+        }
+        50% { 
+            background-color: $accent-1; 
+        }
+    }
+
+    @include breakpoint(tablet) {
+        height: calc(100vh - 61.33px);
+    }
+
+
+    @include clearfix;
 }
 
 nav {
@@ -100,8 +171,6 @@ nav {
 
     background-color: $primary;
     color: $background;
-
-
 
     h3 {
         align-self: center;
@@ -132,78 +201,56 @@ nav {
                 text-decoration: none;
                 
                 @include background-transision($primary, $accent-1, 0.2s);
+                
+                @include breakpoint(tablet) {
+                    flex-grow: 1;
+                    padding: 0;
+                    text-align: center;
+                }
             }
 
-        }
-    }
-}
-
-
-#text {
-	letter-spacing: 2px;
-	display: inline;
-	vertical-align: middle;
-	color: $accent-1;
-    margin-left: 0.2em;
-}
-
-#cursor {
-	display: inline-block;
-	vertical-align: middle;
-	width: 10px;
-	height: 1em;
-	background-color: $accent-1;
-	animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-	from, to { 
-		background-color: transparent 
-	}
-	50% { 
-		background-color: $accent-1; 
-	}
-}
-
-header {
-    height: 95vh;
-    padding: 0 0 0 5%;
-
-    div {
-        width: 100%;
-        position: relative;
-        top: 45%;
-        font-size: 2.0em;
-
-        div {
-            display: inline;
-            vertical-align: middle;
-            font-family: $font-title;
-            font-weight: 600;
+            @include breakpoint(tablet) {
+                flex-grow: 1;
+                justify-content: center;
+            }
         }
 
-        hr {
-            width: 1.5em;
-            margin-left: 0px;
-            border-top: 0.5em solid $primary;
+        @include breakpoint(tablet) {
+            padding: 0;
         }
     }
 
-    @include clearfix;
+    @include breakpoint(laptop) {
+    }
+    
+    @include breakpoint(tablet) {
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 
 section {
-    padding-top: 40px;
+    margin-right: 25%;
+    padding-top: 5vh;
+    
     h1 {
         font-size: 2em;
     }
-
+    
     p {
         line-height: 2;
         text-align: justify;
         margin: 2.5em 0 2.5em 0;
     }
+    
+    @include breakpoint(tablet) {
+        margin-right: 0;
+        padding-top: 80px;
+    }
+
+    @include clearfix;
 }
 
 
@@ -233,11 +280,22 @@ body > footer {
     img {
         display: block;
         margin: auto;
-        width: 250px;
-        height: 250px;
         border-radius: 50%;
-        filter: grayscale(100%);
+
+        max-width: 350px;
+        max-height: 350px;
+        min-width: 120px;
+        min-height: 120px;
+        width: 25vw;
+        height: 25vw;
+
         object-fit: cover;
+        filter: grayscale(100%);
+
+        @include breakpoint(tablet) {
+            min-width: 180px;
+            min-height: 180px;
+        }
     }
 }
 
@@ -322,7 +380,8 @@ body > footer {
     }
 
     .authors {
-        font-size: 0.8em;
+        font-size: 0.85em;
+        
     }
 
     aside {
@@ -347,13 +406,13 @@ body > footer {
                     color:$background;
                     padding: 5px;
                     margin-right: 10px;
-                    font-size: 0.6em;
                     border-radius: 8px;
                 }
             }
 
             &.icons {
                 padding: 0;
+                font-size: 1.2em;
 
                 li {
                     margin: 0 15px 0 0;
