@@ -76,29 +76,25 @@ a {
 
 header, main {
     font-family: $font-body;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     max-width: 1280px;
     padding: 5% 5% 0 5%;
 
 
     @include breakpoint(laptop) {
-        font-size: 1em;
-    }
-    @include breakpoint(mobile) {
-        font-size: 0.65em;
-        width: 100%;
+        font-size: 1rem;
     }
 }
 
 header {
-    height: calc(100vh - 5vh);
+    height: calc(100vh - 61.33px);
     padding: 0 0 0 5%;
 
     div {
         width: 100%;
         position: relative;
         top: 45%;
-        font-size: 2.0em;
+        font-size: 5.0rem;
 
         div {
             display: inline;
@@ -108,9 +104,26 @@ header {
         }
 
         hr {
-            width: 1.5em;
-            margin-left: 0px;
-            border-top: 0.5em solid $primary;
+            width: 2.5rem;
+            margin-left: 0.2rem;
+            margin-top: 0.2rem;
+            border-top: 0.5rem solid $primary;
+
+            @include breakpoint(laptop) {
+                width: 2rem;
+            }
+
+            @include breakpoint(mobile) {
+                width: 1.5rem;
+            }
+        }
+
+        @include breakpoint(laptop) {
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 2.75rem;
         }
     }
 
@@ -119,7 +132,7 @@ header {
         display: inline;
         vertical-align: middle;
         color: $accent-1;
-        margin-left: 0.2em;
+        margin-left: 0.2rem;
 
         @include breakpoint(tablet) {
             &::before {
@@ -133,9 +146,14 @@ header {
         display: inline-block;
         vertical-align: middle;
         width: 10px;
-        height: 1em;
+        height: 5rem;
         background-color: $accent-1;
         animation: blink 1s step-end infinite;
+
+        @include breakpoint(laptop) {
+            height: 3.5rem;
+            width: 5px;
+        }
     }
 
     @keyframes blink {
@@ -147,16 +165,11 @@ header {
         }
     }
 
-    @include breakpoint(tablet) {
-        height: calc(100vh - 61.33px);
-    }
-
-
     @include clearfix;
 }
 
 nav {
-    height: 5vh;
+    height: 61.33px;
     padding: 0 5% 0 5%;
     position: sticky;
     top: 0;
@@ -167,7 +180,7 @@ nav {
     justify-content: flex-start;
 
     font-family: $font-body; 
-    font-size: 1.25em;
+    font-size: 1.25rem;
 
     background-color: $primary;
     color: $background;
@@ -207,26 +220,40 @@ nav {
                     padding: 0;
                     text-align: center;
                 }
+
+                @include breakpoint(mobile) {
+                    padding: 8px 0 8px 0;
+                }
             }
 
             @include breakpoint(tablet) {
                 flex-grow: 1;
                 justify-content: center;
             }
+
+            @include breakpoint(mobile) {
+                flex: 1 1 50%;
+            }
         }
 
         @include breakpoint(tablet) {
             padding: 0;
         }
+
+        @include breakpoint(mobile) {
+            flex-wrap: wrap;
+        }
     }
 
-    @include breakpoint(laptop) {
-    }
-    
     @include breakpoint(tablet) {
         justify-content: center;
         flex-direction: column;
         height: auto;
+    }
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        padding: 0;
     }
 }
 
@@ -236,13 +263,13 @@ section {
     padding-top: 5vh;
     
     h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
     
     p {
         line-height: 2;
         text-align: justify;
-        margin: 2.5em 0 2.5em 0;
+        margin: 2.5rem 0 2.5rem 0;
     }
     
     @include breakpoint(tablet) {
@@ -259,22 +286,30 @@ body > footer {
     background-color: $primary;
     color: $background;
 
-    padding: 1em 1em 1em 5em;
+    padding: 1rem 1rem 1rem 5rem;
     margin: 0;
 
     text-align: left;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 1.5;
 
     i {
         padding-left: 0.3%;
         padding-right: 0.3%;
     }
+
+    @include breakpoint(mobile) {
+        padding-left: 1rem;
+    }
 }
 
 #about {
     p {
-        text-indent: 3em;
+        text-indent: 3rem;
+
+        @include breakpoint(mobile) {
+            text-indent: 0;
+        }
     }
 
     img {
@@ -296,6 +331,11 @@ body > footer {
             min-width: 180px;
             min-height: 180px;
         }
+
+        @include breakpoint(mobile) {
+            min-width: 150px;
+            min-height: 150px;
+        }
     }
 }
 
@@ -305,22 +345,32 @@ body > footer {
         height: 400px;
 
         border: 0px;
+
+        @include breakpoint(mobile) {
+            height: 300px;
+        }
     }
 
     ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
 
         padding: 0;
         list-style-type: none;
 
-        a {
-            transition: color 1s;
-
-            &:hover {
-                color: $accent-2;
-                background-image: none;
+        li {
+            a {
+                transition: color 1s;
+    
+                &:hover {
+                    color: $accent-2;
+                    background-image: none;
+                }
+            }
+            @include breakpoint(mobile) {
+                flex: 1 1 33%;
             }
         }
     }
@@ -329,7 +379,7 @@ body > footer {
 #teaching {
     p {
         line-height: 1.5;   
-        margin: 1.5em 0 1.5em 0; 
+        margin: 1.5rem 0 1.5rem 0; 
     }
 
     li {
@@ -341,12 +391,12 @@ body > footer {
             display: block;
             font-family: $font-body;
             font-weight: normal;
-            font-size: 0.7em;
+            font-size: 0.7rem;
         }
     }
 
     .course {
-        padding-left: 1em;
+        padding-left: 1rem;
         border-left: 10px lighten($primary, 85%) solid;
         margin-bottom: 35px;
 
@@ -358,11 +408,16 @@ body > footer {
     
                 list-style-type: none;
                 display: inline-flex;
+                flex-wrap: wrap;
     
                 li {
                     margin-right: 10px;
                 }
             }
+        }
+
+        @include breakpoint(mobile) {
+            border-left: 2px lighten($primary, 85%) solid;
         }
     }
 
@@ -380,7 +435,7 @@ body > footer {
     }
 
     .authors {
-        font-size: 0.85em;
+        font-size: 0.85rem;
         
     }
 
@@ -412,7 +467,7 @@ body > footer {
 
             &.icons {
                 padding: 0;
-                font-size: 1.2em;
+                font-size: 1.2rem;
 
                 li {
                     margin: 0 15px 0 0;
@@ -469,12 +524,23 @@ body > footer {
             position: inherit;
             color: rgba($background, 0.2);
             text-align: right;
-            font-size: 5em;
+            font-size: 5rem;
         }
 
         h4 {
-            margin-top: -5em;
+            margin-top: -5rem;
         }
+
+        @include breakpoint(mobile) {
+            width: 200px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -485,11 +551,12 @@ ul.badges {
 
     list-style-type: none;
     display: inline-flex;
+    flex-wrap: wrap;
 
-    font-size: 0.75em;
+    font-size: 0.75rem;
 
     li {
-        margin: 0 20px 0 0;
+        margin: 0 20px 10px 0;
         padding: 3px 12px 3px 12px;
         border-radius: 10px;
 
