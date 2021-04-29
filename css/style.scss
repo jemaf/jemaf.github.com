@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ @mixin breakpoint($point) {
+    @if $point == laptop {
+        @media (max-width: 1081px) { @content ; }
+    }
+    @else if $point == tablet {
+        @media (max-width: 769px) { @content ; }
+    }
+    @else if $point == mobile {
+        @media (max-width: 476px)  { @content ; }
+    }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin background-transision($color1, $color2, $time) {
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, $color1 50%, $color2 50%);
+    transition: background-position $time ease-in-out, color $time ease-in-out;
+
+    &:hover {
+        background-position: 0 100%;
+        color: $color1;
+    }
+}
+
+$font-title: 'Cinzel';
+$font-body: 'Montserrat';
+
+
+$accent-1:   #E87A2D;
+$accent-2:   #050E59;
+$accent-3:   #065DCF;
+$background: #FFFFFF;
+$primary:    #111111;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+}
+
+li {
+    line-height: 2;
+
+    @include breakpoint(tablet) {
+        line-height: 1.5;
+    }
+
+    @include breakpoint(mobile) {
+        line-height: 1.25;
+    }
+}
+
+a {
+    color: $accent-3;
+    text-decoration: none;
+
+    padding: 2px 8px 2px 8px;
+
+    @include background-transision($background, $accent-2, 0.3s);
+}
+
+header, main {
+    font-family: $font-body;
+    font-size: 1.25rem;
+    max-width: 1280px;
+    padding: 5% 5% 0 5%;
+
+
+    @include breakpoint(laptop) {
+        font-size: 1rem;
+    }
+}
+
+header {
+    height: calc(100vh - 61.33px);
+    padding: 0 0 0 5%;
+
+    div {
+        width: 100%;
+        position: relative;
+        top: 45%;
+        font-size: 5.0rem;
+
+        div {
+            display: inline;
+            vertical-align: middle;
+            font-family: $font-title;
+            font-weight: 600;
+        }
+
+        hr {
+            width: 2.5rem;
+            margin-left: 0.2rem;
+            margin-top: 0.2rem;
+            border-top: 0.5rem solid $primary;
+
+            @include breakpoint(laptop) {
+                width: 2rem;
+            }
+
+            @include breakpoint(mobile) {
+                width: 1.5rem;
+            }
+        }
+
+        @include breakpoint(laptop) {
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 2.75rem;
+        }
+    }
+
+    #text {
+        letter-spacing: 2px;
+        display: inline;
+        vertical-align: middle;
+        color: $accent-1;
+        margin-left: 0.2rem;
+
+        @include breakpoint(tablet) {
+            &::before {
+                content: '';
+                display: block;
+            }
+        }
+    }
+
+    #cursor {
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 5rem;
+        background-color: $accent-1;
+        animation: blink 1s step-end infinite;
+
+        @include breakpoint(laptop) {
+            height: 3.5rem;
+            width: 5px;
+        }
+    }
+
+    @keyframes blink {
+        from, to { 
+            background-color: transparent 
+        }
+        50% { 
+            background-color: $accent-1; 
+        }
+    }
+
+    @include clearfix;
+}
+
+nav {
+    height: 61.33px;
+    padding: 0 5% 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    font-family: $font-body; 
+    font-size: 1.25rem;
+
+    background-color: $primary;
+    color: $background;
+
+    h3 {
+        align-self: center;
+        margin: 0;
+        display: inline-block;
+    }
+
+    ul {
+        display: inline-flex;
+        list-style-type: none;
+        float: inline-end;
+        align-items: stretch;
+
+        margin: 0;
+                
+        li {
+            display: flex;
+            align-items: stretch;
+                 
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                padding: 0 15px 0 15px;
+                
+                color: $background;
+                text-decoration: none;
+                
+                @include background-transision($primary, $accent-1, 0.2s);
+                
+                @include breakpoint(tablet) {
+                    flex-grow: 1;
+                    padding: 0;
+                    text-align: center;
+                }
+
+                @include breakpoint(mobile) {
+                    padding: 8px 0 8px 0;
+                }
+            }
+
+            @include breakpoint(tablet) {
+                flex-grow: 1;
+                justify-content: center;
+            }
+
+            @include breakpoint(mobile) {
+                flex: 1 1 50%;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            padding: 0;
+        }
+
+        @include breakpoint(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
+section {
+    margin-right: 25%;
+    padding-top: 5vh;
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        line-height: 2;
+        text-align: justify;
+        margin: 2.5rem 0 2.5rem 0;
+    }
+    
+    @include breakpoint(tablet) {
+        margin-right: 0;
+        padding-top: 80px;
+    }
+
+    @include clearfix;
+}
+
+
+body > footer {
+    font-family: $font-body;
+    background-color: $primary;
+    color: $background;
+
+    padding: 1rem 1rem 1rem 5rem;
+    margin: 0;
+
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    i {
+        padding-left: 0.3%;
+        padding-right: 0.3%;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: 1rem;
+    }
+}
+
+#about {
+    p {
+        text-indent: 3rem;
+
+        @include breakpoint(mobile) {
+            text-indent: 0;
+        }
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+
+        max-width: 350px;
+        max-height: 350px;
+        min-width: 120px;
+        min-height: 120px;
+        width: 25vw;
+        height: 25vw;
+
+        object-fit: cover;
+        filter: grayscale(100%);
+
+        @include breakpoint(tablet) {
+            min-width: 180px;
+            min-height: 180px;
+        }
+
+        @include breakpoint(mobile) {
+            min-width: 150px;
+            min-height: 150px;
+        }
+    }
+}
+
+#contact {
+    iframe {
+        width: 100%;
+        height: 400px;
+
+        border: 0px;
+
+        @include breakpoint(mobile) {
+            height: 300px;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            a {
+                transition: color 1s;
+    
+                &:hover {
+                    color: $accent-2;
+                    background-image: none;
+                }
+            }
+            @include breakpoint(mobile) {
+                flex: 1 1 33%;
+            }
+        }
+    }
+}
+
+#teaching {
+    p {
+        line-height: 1.5;   
+        margin: 1.5rem 0 1.5rem 0; 
+    }
+
+    li {
+        line-height: 1.5;
+    }
+
+    h3 {
+        span {
+            display: block;
+            font-family: $font-body;
+            font-weight: normal;
+            font-size: 1rem;
+        }
+    }
+
+    .course {
+        padding-left: 1rem;
+        border-left: 10px lighten($primary, 85%) solid;
+        margin-bottom: 35px;
+
+        .classes {
+            & > ul {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 0;
+    
+                list-style-type: none;
+                display: inline-flex;
+                flex-wrap: wrap;
+    
+                li {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        @include breakpoint(mobile) {
+            border-left: 2px lighten($primary, 85%) solid;
+        }
+    }
+
+
+}
+
+
+.publication {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    .title {
+        font-weight: 600;
+    }
+
+    .authors {
+        font-size: 1rem;
+        
+        @include breakpoint(mobile) {
+            font-size: 0.85rem;
+        }
+    }
+
+    aside {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer {
+        display: flex;
+
+        ul {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            list-style-type: none;
+            display: inline-flex;
+
+            &.keywords {
+                padding: 0;
+
+                li {
+                    background-color: $primary;
+                    color:$background;
+                    padding: 5px;
+                    margin-right: 10px;
+                    border-radius: 8px;
+                }
+            }
+
+            &.icons {
+                padding: 0;
+                font-size: 1.2rem;
+
+                li {
+                    margin: 0 15px 0 0;
+
+                    a {
+                        transition: color 1s;
+
+                        &:hover {
+                            color: $accent-2;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.board {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    div {
+        flex-basis: content;
+        display: flex;
+        flex-direction: column;
+
+        margin: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        width: 145px;
+        height: 200px;
+
+        background-color: $primary;
+        color: $background;
+
+        h4 {
+            margin-top: -5rem;
+        }
+
+        span {
+            margin: auto;
+            width: 100%;
+
+            @include breakpoint(mobile) {
+                font-size: large;
+            }
+        }
+
+        footer {
+            font-size: small;
+            margin-top: auto;
+
+            @include breakpoint(mobile) {
+                font-size: 0.9rem;
+            }
+        }
+
+        i {
+            position: inherit;
+            color: rgba($background, 0.2);
+            text-align: right;
+            font-size: 5rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 80%;
+            height: 120px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+ul.badges {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    font-size: 0.9rem;
+
+    li {
+        margin: 0 20px 10px 0;
+        padding: 3px 12px 3px 12px;
+        border-radius: 10px;
+
+        background-color: $primary;
+        color: $background;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 0.85rem;
+    }
+}
