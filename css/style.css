@@ -575,14 +575,16 @@ body > footer i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+
+.board::-webkit-scrollbar {
+  display: none;
 }
 
 .board div {
@@ -593,6 +595,9 @@ body > footer i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin: 10px;
   padding: 20px;
   border-radius: 20px;
