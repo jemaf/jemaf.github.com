@@ -586,8 +586,6 @@ body > footer i {
 }
 
 .board div {
-  -ms-flex-preferred-size: content;
-      flex-basis: content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
