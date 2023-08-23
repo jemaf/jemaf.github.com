@@ -276,9 +276,6 @@ body > footer i {
   }
 }
 
-#about p {
-  text-indent: 3rem;
-}
 @media (max-width: 476px) {
   #about p {
     text-indent: 0;
@@ -344,10 +341,13 @@ body > footer i {
 
 #teaching p {
   line-height: 1.5;
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 #teaching li {
   line-height: 1.5;
+}
+#teaching h3 {
+  margin-bottom: 0.5rem;
 }
 #teaching h3 span {
   display: block;
@@ -506,7 +506,7 @@ ul.badges {
   font-size: 0.9rem;
 }
 ul.badges li {
-  margin: 0 20px 10px 0;
+  margin: 0 10px 5px 0;
   padding: 3px 12px 3px 12px;
   border-radius: 10px;
   background-color: #111111;
