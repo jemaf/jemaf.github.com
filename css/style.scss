@@ -371,10 +371,11 @@ body > footer {
 
         li {
             a {
+                color: $primary;
                 transition: color 1s;
     
                 &:hover {
-                    color: $accent-2;
+                    color: $accent-1;
                     background-image: none;
                 }
             }
@@ -485,10 +486,11 @@ body > footer {
                     margin: 0 15px 0 0;
 
                     a {
+                        color: $primary;
                         transition: color 1s;
 
                         &:hover {
-                            color: $accent-2;
+                            color: $accent-1;
                             background-image: none;
                         }
                     }
