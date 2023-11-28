@@ -43,6 +43,10 @@ $accent-3:   #065DCF;
 $background: #FFFFFF;
 $primary:    #111111;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
