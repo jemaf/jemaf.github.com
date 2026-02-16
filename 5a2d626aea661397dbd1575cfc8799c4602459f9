@@ -1,0 +1,40 @@
+tailwind.config.js
+  31d18715f572f699 1-23
+code.html
+  31d18715f572f699 45,211,253-255,264-269,304-305,321,337,340,361-362,376-377,383
+css/input.css
+  31d18715f572f699 1-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.3",
+  "base_commit_sha": "5a2d626aea661397dbd1575cfc8799c4602459f9",
+  "prompts": {
+    "31d18715f572f699": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "c8d130c1-9b51-4ff3-9382-a3c96a01b3a6",
+        "model": "copilot/gpt-4.1"
+      },
+      "human_author": "João Eduardo Montandon <edu.montandon@gmail.com>",
+      "messages": [],
+      "total_additions": 680,
+      "total_deletions": 448,
+      "accepted_lines": 458,
+      "overriden_lines": 5
+    },
+    "8b15754229338842": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "a6f39801-2794-4319-b1a4-e27f5719ffc2",
+        "model": "copilot/gpt-4.1"
+      },
+      "human_author": "João Eduardo Montandon <edu.montandon@gmail.com>",
+      "messages": [],
+      "total_additions": 84,
+      "total_deletions": 35,
+      "accepted_lines": 3,
+      "overriden_lines": 8
+    }
+  }
+}
