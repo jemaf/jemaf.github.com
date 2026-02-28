@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.6",
+  "base_commit_sha": "503455668970846c032dc54136ece103e916004c",
+  "prompts": {
+    "31d18715f572f699": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "c8d130c1-9b51-4ff3-9382-a3c96a01b3a6",
+        "model": "copilot/gpt-4.1"
+      },
+      "human_author": "João Eduardo Montandon <edu.montandon@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 286,
+      "overriden_lines": 0
+    }
+  }
+}
