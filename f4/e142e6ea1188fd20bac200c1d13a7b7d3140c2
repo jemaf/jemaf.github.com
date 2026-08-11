@@ -1,0 +1,29 @@
+courses/dcc-seis/index.html
+  s_512423a47eb93e::t_7a3380fbac7116 46
+  s_512423a47eb93e::t_5b856df2e3a5ed 44
+  s_512423a47eb93e::t_6f460b37b25714 7-14,16-17
+  h_fc24a520c03326 1-6,15,18-43,45,49-50,54-63
+  s_512423a47eb93e::t_891768e2107467 47-48
+  s_512423a47eb93e::t_3d2dd502e29350 51-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "f4e142e6ea1188fd20bac200c1d13a7b7d3140c2",
+  "prompts": {},
+  "humans": {
+    "h_fc24a520c03326": {
+      "author": "João Eduardo Montandon <edu.montandon@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_512423a47eb93e": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "12a21aea-25e4-4318-9e29-8587791de18a",
+        "model": "gpt-5-mini"
+      },
+      "human_author": "João Eduardo Montandon <edu.montandon@gmail.com>"
+    }
+  }
+}
