@@ -1,0 +1,15 @@
+courses/dcc-seis/index.html
+  h_fc24a520c03326 78-101
+  h_fc24a520c03326 77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8af26be01adee64b24bb1f8e6795afb00969fde6",
+  "prompts": {},
+  "humans": {
+    "h_fc24a520c03326": {
+      "author": "João Eduardo Montandon <edu.montandon@gmail.com>"
+    }
+  }
+}
